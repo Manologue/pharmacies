@@ -17,10 +17,11 @@ class StockFactory extends Factory
     public function definition()
     {
         return [
-            'product_id'=>$this->faker->randomNumber,
-            'user_id'=>$this->faker->randomNumber,
-            'quantity'=>$this->faker->randomNumber,
-            'price'=>$this->faker->randomNumber
+            'product_id' => $this->faker->numberBetween(1, 10),
+            'user_id' => $this->faker->numberBetween(1, 10),
+            'quantity' => $this->faker->numberBetween(1, 50),
+            'price' => $this->faker->numberBetween(1000, 10000),
+            'price_currency' => "FCFA",
         ];
     }
 }
