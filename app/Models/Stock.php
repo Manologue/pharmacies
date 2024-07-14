@@ -14,4 +14,6 @@ class Stock extends Model
         'price',
     ];
 
+
+
 }
