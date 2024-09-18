@@ -245,33 +245,53 @@ Route::Group(['prefix' => 'admin'], function () {
 
 Route::get('/add-cities', function () {
 
-    $client = new \GuzzleHttp\Client();
-    $page = 1;
-    $perPage = 100;
-    // $apiKey = env('CITIES_RAPIDAPI_KEY');
+    // $client = new \GuzzleHttp\Client();
+    // $page = 1;
+    // $perPage = 100;
+    // // $apiKey = env('CITIES_RAPIDAPI_KEY');
 
-    do {
-        $response = $client->request('GET', 'https://countries-cities.p.rapidapi.com/location/country/CM/city/list?page=' . $page . '&per_page=' . $perPage . '&format=json&population=1501', [
-            'headers' => [
-                'x-rapidapi-host' => 'countries-cities.p.rapidapi.com',
-                'x-rapidapi-key' => 'a90541ed43mshe779c548ee4666dp1bcd5ajsn3fb33e02e633',
-            ],
-        ]);
+    // do {
+    //     $response = $client->request('GET', 'https://countries-cities.p.rapidapi.com/location/country/CM/city/list?page=' . $page . '&per_page=' . $perPage . '&format=json&population=1501', [
+    //         'headers' => [
+    //             'x-rapidapi-host' => 'countries-cities.p.rapidapi.com',
+    //             'x-rapidapi-key' => 'a90541ed43mshe779c548ee4666dp1bcd5ajsn3fb33e02e633',
+    //         ],
+    //     ]);
 
-        $data = json_decode($response->getBody(), true);
+    //     $data = json_decode($response->getBody(), true);
 
-        foreach ($data['cities'] as $city) {
-            City::create([
-                'name' => $city['name'],
-                'geonameid' => $city['geonameid'],
-                'longitude' => $city['longitude'],
-                'latitude' => $city['latitude'],
-            ]);
-        }
+    //     foreach ($data['cities'] as $city) {
+    //         City::create([
+    //             'name' => $city['name'],
+    //             'geonameid' => $city['geonameid'],
+    //             'longitude' => $city['longitude'],
+    //             'latitude' => $city['latitude'],
+    //         ]);
+    //     }
 
-        $page++;
+    //     $page++;
 
-    } while (!empty($data['cities']));
+    // } while (!empty($data['cities']));
+
+
+    // default
+    // $query = City::orderBy('name', 'asc');
+
+
+    // $query->whereHas('users', function ($query) {
+    //     // Check if there's at least one active related transword
+    //     $query->where('active', true);
+    // });
+
+    $cities = City::whereHas('users', function ($query) {
+        $query->whereColumn('cities.geonameid', 'users.city_id');
+        $query->where('active', true);
+    })->get();
+    // // retrieve the cities that meet the conditions
+    // $cities = $query->get();
+
+    // return the cities in an HTTP response
+    return response()->json($cities);
 
 });
 
