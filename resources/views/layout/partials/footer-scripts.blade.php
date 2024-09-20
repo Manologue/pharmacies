@@ -1,8 +1,10 @@
-		<!-- jQuery -->
+
+        <!-- jQuery -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
-		
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" ></script>
+
 		<!-- Bootstrap Core JS -->
-		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/popper.min.js"></>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		<!-- Select2 JS -->
 		<script src="assets/plugins/select2/js/select2.min.js"></script>
@@ -11,7 +13,7 @@
 		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 		<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
 		<!-- Owl Carousel -->
-		<script src="assets/js/owl.carousel.min.js"></script>		
+		<script src="assets/js/owl.carousel.min.js"></script>
 		<!-- Sticky Sidebar JS -->
         <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
         <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
@@ -19,6 +21,7 @@
 		<!-- <script src="assets/js/circle-progress.min.js"></script> -->
 		<!-- Custom JS -->
 		<script src="assets/js/script.js"></script>
+
 		@if(Route::is(['map-grid','map-list']))
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6adZVdzTvBpE2yBRK8cDfsss8QXChK0I"></script>
 		<script src="assets/js/map.js"></script>

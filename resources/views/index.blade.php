@@ -1,5 +1,5 @@
 @extends('layout.mainlayout')
-@section('content')		
+@section('content')
 		<!-- Home Banner -->
 		<section class="section section-search">
 				<div class="container">
@@ -8,21 +8,21 @@
 							<h1>Search Teacher in <span>Mentoring Appointment</span></h1>
 							<p>Discover the best Mentors & institutions the city nearest to you.</p>
 						</div>
-                         
+
 						<!-- Search -->
 						<div class="search-box">
 							<form action="search">
 								<div class="form-group search-location">
-									<input type="text" class="form-control" placeholder="Search Location">
+									<input type="text" class="typeahead form-control" id="city" name="city" placeholder="Search Location">
 								</div>
 								<div class="form-group search-info">
-									<input type="text" class="form-control" placeholder="Search School, Online educational centers, etc">
+									<input type="text" class="form-control" id="product" name="product" placeholder="Search medicines..">
 								</div>
 								<button type="submit" class="btn btn-primary search-btn"><i><img src="assets/img/search-submit.png" alt=""></i> <span>Search</span></button>
 							</form>
 						</div>
 						<!-- /Search -->
-						
+
 					</div>
 				</div>
 			</section>
@@ -37,13 +37,13 @@
 					</div>
 					<div class="row">
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="feature-box text-center">					
+							<div class="feature-box text-center">
 								<div class="feature-header">
 									<div class="feature-icon">
 										<span class="circle"></span>
 										<i><img src="assets/img/icon-1.png" alt=""></i>
-									</div>		
-									<div class="feature-cont">	
+									</div>
+									<div class="feature-cont">
 										<div class="feature-text">Sign up</div>
 									</div>
 								</div>
@@ -51,12 +51,12 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="feature-box text-center">					
+							<div class="feature-box text-center">
 								<div class="feature-header">
 									<div class="feature-icon">
 										<span class="circle"></span>
 										<i><img src="assets/img/icon-2.png" alt=""></i>
-									</div>	
+									</div>
 									<div class="feature-cont">
 										<div class="feature-text">Collaborate</div>
 									</div>
@@ -65,12 +65,12 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-lg-4">
-							<div class="feature-box text-center">					
+							<div class="feature-box text-center">
 								<div class="feature-header">
 									<div class="feature-icon">
 										<span class="circle"></span>
 										<i><img src="assets/img/icon-3.png" alt=""></i>
-									</div>	
+									</div>
 									<div class="feature-cont">
 										<div class="feature-text">Improve & Get Back</div>
 									</div>
@@ -78,7 +78,7 @@
 								<p class="mb-0">you can gather different skill set, and you can become mentor too</p>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</section>
@@ -91,7 +91,7 @@
 						<p class="sub-title">Do you want to move on next step? Choose your most popular leaning mentors, it will help you to achieve your professional goals.</p>
 					</div>
 					<div class="owl-carousel owl-theme">
-				
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -106,7 +106,7 @@
 											Digital Marketer
 										</div>
 									</div>
-									<div class="rating">							
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -120,7 +120,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -135,7 +135,7 @@
 											UNIX, Calculus, Trigonometry
 										</div>
 									</div>
-									<div class="rating">						
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -149,7 +149,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -164,7 +164,7 @@
 											ASP.NET,Computer Gaming
 										</div>
 									</div>
-									<div class="rating">						
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -178,7 +178,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -193,7 +193,7 @@
 											Computer Programming
 										</div>
 									</div>
-									<div class="rating">						
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -207,7 +207,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -222,7 +222,7 @@
 											Digital Marketer
 										</div>
 									</div>
-									<div class="rating">							
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -236,7 +236,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -251,7 +251,7 @@
 											UNIX,Calculus,Trigonometry
 										</div>
 									</div>
-									<div class="rating">						
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -265,7 +265,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -280,7 +280,7 @@
 											ASP.NET,Computer Gaming
 										</div>
 									</div>
-									<div class="rating">						
+									<div class="rating">
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
 										<i class="fas fa-star filled"></i>
@@ -294,7 +294,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -323,7 +323,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -352,7 +352,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -381,7 +381,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -410,7 +410,7 @@
 								</div>
 							</div>
 						</div>
-					
+
 						<div class="course-box">
 							<div class="product">
 								<div class="product-img">
@@ -552,16 +552,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="view-all text-center"><a href="#" class="btn btn-primary">View All</a></div>						
+						<div class="view-all text-center"><a href="#" class="btn btn-primary">View All</a></div>
 					</div>
 				</div>
 			</section>
 			<!-- Path section end -->
-			
+
 			<!-- Blog Section -->
 		   <section class="section section-blogs">
 				<div class="container">
-				
+
 					<!-- Section Header -->
 					<div class="section-header text-center">
 						<span>Lorem ipsum dolor</span>
@@ -569,10 +569,10 @@
 						<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 					<!-- /Section Header -->
-					
+
 					<div class="row blog-grid-row">
 						<div class="col-md-6 col-lg-3 col-sm-12">
-						
+
 							<!-- Blog Post -->
 							<div class="blog grid-blog">
 								<div class="blog-image">
@@ -592,10 +592,10 @@
 								</div>
 							</div>
 							<!-- /Blog Post -->
-							
+
 						</div>
 						<div class="col-md-6 col-lg-3 col-sm-12">
-						
+
 							<!-- Blog Post -->
 							<div class="blog grid-blog">
 								<div class="blog-image">
@@ -615,10 +615,10 @@
 								</div>
 							</div>
 							<!-- /Blog Post -->
-							
+
 						</div>
 						<div class="col-md-6 col-lg-3 col-sm-12">
-						
+
 							<!-- Blog Post -->
 							<div class="blog grid-blog">
 								<div class="blog-image">
@@ -638,10 +638,10 @@
 								</div>
 							</div>
 							<!-- /Blog Post -->
-							
+
 						</div>
 						<div class="col-md-6 col-lg-3 col-sm-12">
-						
+
 							<!-- Blog Post -->
 							<div class="blog grid-blog">
 								<div class="blog-image">
@@ -661,15 +661,15 @@
 								</div>
 							</div>
 							<!-- /Blog Post -->
-							
+
 						</div>
 					</div>
-					<div class="view-all text-center"> 
+					<div class="view-all text-center">
 						<a href="blog-list" class="btn btn-primary">View All</a>
 					</div>
 				</div>
 			</section>
-			<!-- /Blog Section -->	
+			<!-- /Blog Section -->
 
 			<!-- Statistics Section -->
 			<section class="section statistics-section">
@@ -698,4 +698,3 @@
 			</section>
 			<!-- /Statistics Section -->
 	   @endsection
-	  

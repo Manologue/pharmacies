@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -82,5 +83,15 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    public function autocompleteProducts(Request $request)
+    {
+
+        $term = $request->term;
+        $products = Product::select('name')
+                 ->where('name', 'like', "%{$term}%")
+                 ->get();
+        return response()->json($products);
     }
 }
